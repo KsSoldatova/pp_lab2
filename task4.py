@@ -3,6 +3,7 @@ from email import generator
 
 
 def get_next_element(class_mark: str) -> generator:
+    """This function gradually returns us files of class"""
     path = os.path.join("dataset", class_mark)
     names_list = os.listdir(path)
     names_list.append(None)

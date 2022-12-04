@@ -7,11 +7,15 @@ from email import generator
 
 
 def get_element(class_name: str) -> generator:
+    """This function gradually returns us files of class"""
     for file_name in os.listdir(os.path.join("dataset", class_name)):
         yield file_name
 
 
 def create_randomname_file(annotation_name: str, dir_copy: str) -> None:
+    """This function copies files from dataset to new directory for copies
+    and renames files changing filename to a random number from 0 to 10000
+    and create csv annotation with 2 parameters: new name of file and class of file"""
     file_number = list(range(10001))
     random.shuffle(file_number)
     counter = 1
@@ -28,4 +32,5 @@ def create_randomname_file(annotation_name: str, dir_copy: str) -> None:
 
 
 def run3(annotation_name: str, dir_copy: str) -> None:
+    """This function calls previous function in main"""
     create_randomname_file(annotation_name, dir_copy)

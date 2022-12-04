@@ -11,4 +11,3 @@ if __name__ == '__main__':
         print(element)
     for element in get_next_element("tulip"):
         print(element)
-
