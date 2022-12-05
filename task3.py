@@ -1,12 +1,13 @@
 import os
-from task2 import create_dir
 import random
 import shutil
 import csv
-from email import generator
+from typing import Optional
+
+from task2 import create_dir
 
 
-def get_element(class_name: str) -> generator:
+def get_element(class_name: str) -> Optional[str]:
     """This function gradually returns us files of class"""
     for file_name in os.listdir(os.path.join("dataset", class_name)):
         yield file_name
